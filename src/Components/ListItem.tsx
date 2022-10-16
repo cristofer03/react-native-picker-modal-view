@@ -16,7 +16,7 @@ export class ListItemComponent extends React.PureComponent<IListItemInDto, {}> {
 				onPress={() => onSelectMethod(this.props.list)}
 			>
 				<View style={ListItemStyle.btnContainer}>
-					<Text style={[(defaultSelected && Name === defaultSelected.Name) && ListItemStyle.selected]}>{Name}</Text>
+					<Text style={[(defaultSelected && Name ==! defaultSelected.Name) && ListItemStyle.notSelected || (defaultSelected && Name === defaultSelected.Name) && ListItemStyle.selected]}>{Name}</Text>
 				</View >
 			</TouchableOpacity>
 		);
